@@ -33,7 +33,6 @@
         z-index: 2;
         color: var(--white);
         padding-top: var(--header-h);
-        padding-bottom: 60px;
         max-width: 750px;
 
         .tag {
@@ -95,11 +94,19 @@
                     font-size: 1.8rem;
                     font-weight: 800;
                     line-height: 1;
+
+                    @media (max-width: 400px) {
+                        font-size: 1.5rem;
+                    }
                 }
 
                 span {
                     font-size: 0.78rem;
                     opacity: 0.8;
+
+                    @media (max-width: 400px) {
+                        font-size: 0.65rem;
+                    }
                 }
             }
 
