@@ -1,0 +1,45 @@
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
+
+    .about-images {
+        position: relative;
+
+        .about-img {
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .about-img-main {
+            width: 85%;
+        }
+
+        .about-img-secondary {
+            position: absolute;
+            width: 45%;
+            bottom: -30px;
+            right: 0;
+            border: 6px solid var(--cream-dark);
+        }
+    }
+}
+
+.about-content {
+    .about-features {
+        margin: 24px 0 32px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+
+        li {
+            font-weight: 500;
+            color: var(--text-mid);
+        }
+    }
+}
