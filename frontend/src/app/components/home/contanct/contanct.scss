@@ -1,0 +1,111 @@
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .contact-method {
+            display: flex;
+            gap: 16px;
+
+            .contact-icon {
+                width: 48px;
+                height: 48px;
+                border-radius: var(--radius-sm);
+                background: var(--green-pale);
+                color: var(--green);
+                font-size: 1.3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+
+            .contact-text {
+                h3 {
+                    font-size: 1rem;
+                    color: var(--green-dark);
+                    margin-bottom: 4px;
+                }
+
+                p {
+                    color: var(--text-light);
+                    font-size: 0.95rem;
+                }
+            }
+        }
+
+        .contact-socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+
+            .social-link {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: var(--cream-dark);
+                color: var(--green-dark);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all var(--transition);
+
+                &:hover {
+                    background: var(--green);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    .card-form {
+        background: var(--white);
+        padding: 40px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+
+            .form-label {
+                display: block;
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: var(--text-mid);
+                margin-bottom: 8px;
+            }
+
+            .form-input {
+                width: 100%;
+                padding: 12px 16px;
+                border: 1.5px solid var(--cream-dark);
+                background: var(--cream);
+                border-radius: var(--radius-sm);
+                font-size: 0.95rem;
+                color: var(--text-dark);
+                transition: all var(--transition);
+
+                &:focus {
+                    outline: none;
+                    border-color: var(--green);
+                    background: var(--white);
+                    box-shadow: 0 0 0 4px var(--green-pale);
+                }
+                &.invalid {
+                    border-color: var(--red);
+                    background: var(--red-pale);
+                }
+            }
+        }
+    }
+}
